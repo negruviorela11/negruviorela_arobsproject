@@ -1,0 +1,83 @@
+.dropdown-menu{
+       background-color: buttonface;
+       margin: 40px;
+       border-radius: 4px;
+       
+}
+.newMessMenu{
+    background-color:peachpuff;
+    border-color:papayawhip;
+    border-bottom-style:groove;
+    border-left-style: groove;
+    border-right-style: groove;
+    border-top-style: groove;
+    margin-top:10px;
+    border-radius: 4px;
+    -moz-border-radius: 5px; 
+-webkit-border-radius: 5px; 
+}
+.settings{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top:5px;
+}
+.navCol{
+    background-color: menu;
+}
+.meniu{
+    float:left;
+    margin-top: 20px;
+    width:100%; 
+    background-color: #2CA0C9;
+}
+.comp{
+    margin-top:-5px;
+    margin-bottom: -5px;
+    margin-right:12px;
+    margin-left:12px;
+}
+
+#rotund { 
+-moz-border-radius: 15px; 
+-webkit-border-radius: 15px; 
+border-radius: 15px;
+background-color:white;
+width:172px;
+height:100px;
+}
+.footer {
+position:fixed;
+display:block;
+bottom:0;
+clear: both;
+width: 100%;
+background-image: url('../../img/footer1.jpg');
+float: left;
+margin: 0 ;
+font-style: initial;
+//border-radius: 10px;
+box-shadow: 5px 5px 5px #202020;
+
+}
+
+header {
+    background-image: url('../../img/header1.jpg');
+    height: 165px;
+    background-position: 1px 1px;
+    border-right:2px groove white;
+    border-left: 2px groove white;
+    border-bottom:2px groove white;
+}
+.topHeader{
+    width: 100%;
+    height: 100px;
+}
+.new{
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin-left:20px;
+    margin-right:20px;
+}
+.info1{
+    background-color: papayawhip;
+}

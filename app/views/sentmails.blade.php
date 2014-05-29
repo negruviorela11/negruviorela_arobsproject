@@ -1,6 +1,6 @@
 @extends('layouts/siteMaster')
 @section('content')
-<div>
+<div class="new">
     <?php $message=Session::get('message');
           if(!empty($message)){?>
           <div class='alert alert-success clearfix'> 
@@ -15,7 +15,7 @@
 <div>
     <table>
         <table class="table table-hover">
-        <tr class="info">
+        <tr class="info1">
             <td><b>To</b></td>
             <td><b>Subject</b></td>
             <td><b>Message</b></td>
@@ -64,5 +64,8 @@
     </div>
   </div>
 </div>
+        <div class="new form-group">
+    <a href="{{url('')}}"class="btn btn-primary btn-default">Back to menu</a>
+    </div>
 </div>
 @stop

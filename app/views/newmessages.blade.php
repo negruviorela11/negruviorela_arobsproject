@@ -1,6 +1,6 @@
 @extends('layouts/siteMaster')
 @section('content')
-<div>
+<div class="new">
     <?php $message=Session::get('message');
           if(!empty($message)){?>
           <div class='alert alert-success clearfix'> 
@@ -11,9 +11,9 @@
           </div>
           <?php } ?>
 </div>
-<div>
+<div class="new">
     <table class="table table-hover">
-        <tr class="info">
+        <tr class="info1">
             <td><b>From</b></td>
             <td><b>Subject</b></td>
             <td><b>Message</b></td>

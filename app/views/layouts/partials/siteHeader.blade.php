@@ -1,5 +1,7 @@
 <header>
-    <div>
-        <h1>Free emails</h1>
+    <div class="topHeader">
+    
+        <h1>
+        </h1>
     </div>
 </header>

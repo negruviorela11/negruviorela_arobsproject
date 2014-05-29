@@ -33,7 +33,7 @@ class UserController extends BaseController{
                         'remember'=>Input::get('remember'),
                         'question'=>Input::get('question'));
                 User::where('id', Input::get('id'))->update($user);
-                return Redirect::to('list/users')->with('message','user modified');
+                return Redirect::to('dashboard/'.Input::get('id'))->with('message','Your account has been modified!');
             }else{
                 return Redirect::to('edit/my/account/'.Input::get('id'))->with('validator',$messagesString);
             }
@@ -73,7 +73,7 @@ class UserController extends BaseController{
             $userData=$user->find($id);
         return View::make('useredit',array('user'=>$userData,'gender'=>$gender,'questions'=>$rememberQuestions));
         }else{
-            return Redirect::to('login')->with('message','need to log in first!');
+            return Redirect::to('login')->with('validator','You need to log in first!');
         }
     }
     public function listUsers($id){
@@ -87,7 +87,7 @@ class UserController extends BaseController{
             }
             return View::make('userlist',array('users'=>$users,'id'=>$id));
         }else{
-            return Redirect::to('login')->with('message','You need to log in first');
+            return Redirect::to('login')->with('validator','You need to log in first');
         }
     }
     public function getLogIn(){
@@ -111,7 +111,7 @@ class UserController extends BaseController{
                                                
         } else {
                  return Redirect::to('login')
-                            ->with('message', 'Your username/password combination was incorrect')
+                            ->with('validator', 'Your username/password combination was incorrect')
                             ->withInput();
         }   
     }
@@ -127,7 +127,7 @@ class UserController extends BaseController{
             $userData=$user->find($id);
             return View::make('changepass',array('user'=>$userData));
         }else{
-            return Redirect::to('login')->with('message','You need to log in first');
+            return Redirect::to('login')->with('validator','You need to log in first');
         }
     }
     public function changePass(){
@@ -189,7 +189,7 @@ class UserController extends BaseController{
         if($v->passes()){
             $use=array('password'=>Hash::make(Input::get('new_password')));
             User::where('id', Input::get('id'))->update($use);
-            return Redirect::to('login')->with('messageOK','Your password has been modified');
+            return Redirect::to('login')->with('message','Your password has been modified');
         }else{
             $u=new User();
             $user=$u->find(Input::get('id'));

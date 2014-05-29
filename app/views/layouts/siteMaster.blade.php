@@ -11,10 +11,13 @@
     </head>
     <body>
         @include('layouts/partials/siteHeader')
-        <div>
+        <div class="container">
+        <div class="content">
             @yield('content')
         </div>
+        </div>
         @include('layouts/partials/siteFooter')
+       
         <script>
             var baseUrl = "{{ URL::to('') }}";
         </script>

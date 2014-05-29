@@ -1,9 +1,9 @@
 @extends('layouts/siteMaster')
 @section('content')
 
-<div>
+<div class="new">
     <table class="table table-hover">
-        <tr class="info">
+        <tr class="info1">
             <td><b>Name</b></td>
             <td><b>Surname</b></td>
             <td><b>Email</b></td>
@@ -30,6 +30,7 @@
             </tr>
             <?php } ?>
         </table>
+    <a href="{{url('')}}"class="btn btn-primary btn-default">Cancel</a>
 </div>
 
 @stop
