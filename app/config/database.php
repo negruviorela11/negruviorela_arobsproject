@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'database',
+			'database'  => 'arobs_project',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
@@ -66,7 +66,7 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'database',
+			'database' => 'arobs_project',
 			'username' => 'root',
 			'password' => '',
 			'charset'  => 'utf8',

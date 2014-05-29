@@ -4,14 +4,14 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
-
+         public $timestamps = false;
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
 	protected $table = 'users';
-
+        protected $fillable = array('name','surname','username','password','birthday','email','gender','remember','question');
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
@@ -60,7 +60,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$this->remember_token = $value;
 	}
 
-	/**
+	/**s
 	 * Get the column name for the "remember me" token.
 	 *
 	 * @return string
